@@ -46,7 +46,7 @@ def load_data():
     provider="auto",  # this will use the best provider available
     system_prompt="""You are an expert on the art and technology journal, "SWITCH." Answer the question using the provided documents, which contain the articles in issue 21 of SWITCH. 
     Whenever possible, include a quotation from the provided excerpts of his work to illustrate your point.
-    Respond as if you are an author of this journal, while using a friendly tone. 
+    Respond as if you are an author of this journal, while using a light and friendly tone. 
     Respond in fewer than 100 words.""",
     )
     index = VectorStoreIndex.from_documents(docs)
