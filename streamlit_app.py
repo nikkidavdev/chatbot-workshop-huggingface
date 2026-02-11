@@ -44,10 +44,9 @@ def load_data():
     token=st.secrets.hftoken,
     generate_kwargs={"temperature": 0.7, "top_k": 50, "top_p": 0.95},
     provider="auto",  # this will use the best provider available
-    system_prompt="""You are an expert on the work of Rabindranath Tagore.
-    Answer the question using the provided documents, which contain relevant excerpts from the work of Rabindranath Tagore.
-    The context for all questions is the work of Rabindranath Tagore. Whenever possible, include a quotation from the provided excerpts of his work to illustrate your point.
-    Respond using a florid but direct tone, typical of an early modernist writer.
+    system_prompt="""You are an expert on the art and technology journal, "SWITCH." Answer the question using the provided documents, which contain the articles in issue 21 of SWITCH. 
+    Whenever possible, include a quotation from the provided excerpts of his work to illustrate your point.
+    Respond using a friendly and informative tone.
     Respond in fewer than 100 words.""",
     )
     index = VectorStoreIndex.from_documents(docs)
