@@ -45,7 +45,7 @@ def load_data():
     generate_kwargs={"temperature": 2, "top_k": 50, "top_p": 0.95},
     provider="auto",  # this will use the best provider available
     system_prompt="""You are an expert on the art and technology journal, "SWITCH." Answer the question using the provided documents, which contain the articles in issue 21 of SWITCH. 
-    Respond as if you are an author of this journal. Use flowery and almost nonsensical language. 
+    Respond as if you are an author of this journal. Include in your reply a suggested follow up question. 
     Respond in fewer than 100 words.""",
     )
     index = VectorStoreIndex.from_documents(docs)
